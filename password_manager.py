@@ -7,14 +7,16 @@ def view():
 def add():
     pass
 
+
+
 while True:
     mode = input("add new pwd or view exisitn ones (view or addd)").lower()
 
     if mode =="view":
-        pass
+        view()
 
     elif mode=="add":
-        pass
+        add()
     elif mode=="q":
         break
 
