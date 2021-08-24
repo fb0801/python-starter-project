@@ -2,7 +2,10 @@ master_pwd =input("What is the master password? ")
 
 
 def view():
-    pass
+     with open("passwords.txt", "r") as f:
+        #read a file
+        for line in r.readlines():
+            print(line.rstrip()) #right strip the \n
 
 def add():
     name = input("Account Name: ")
@@ -10,7 +13,7 @@ def add():
 
     with open("passwords.txt", "a") as f:
         #create a file and add data to it
-        f.write(name + "|" + pwd)
+        f.write(name + "|" + pwd + "\n")
 
 
 
