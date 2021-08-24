@@ -1,3 +1,4 @@
+weapon =[]
 name = input("Type your name: ")
 print("Welcome", name, "to your adventure")
 
@@ -18,10 +19,22 @@ if answer =="left":
         
     
 elif answer =="right":
-    answer = input("You stumble across a old bridge, you want to cross it or head back (cross/back)").lower()
+    answer = input("You stumble across a old bridge, you want to cross it or head back (cross/back) ").lower()
 
     if answer =="cross":
-        answer=input("you crossed the old bridge and on the other side see a stranger ")
+        answer=input("you crossed the old bridge and on the other side see a stranger asking for help. Do you help them? (yes/no)").lower()
+
+        if answer =="yes":
+            print("You helped the stranger but they end up taking all of your things and leaving you with just your swoard")
+
+        elif answer =="no":
+            print("Your quest continues")
+            
+        else:
+             print("not a valid option. your quest has ended")
+            
+
+
     elif answer =="back":
         print("you head back in the direction you came from but end up getting lost")
 
