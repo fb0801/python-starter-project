@@ -16,7 +16,7 @@ def load_key():
     return key
 
 
-
+'''if just use the key and fer will work'''
 
 
 master_pwd =input("What is the master password? ")
@@ -30,7 +30,7 @@ def view():
             #print(line.rstrip()) #right strip the \n
             data = line.rstrip()
             user, passsw = data.split("|")
-            print("User:", user, "Password:", fer.decrypt(passw.encode()))
+            print("User:", user, "Password:", fer.decrypt(passw.encode()).decode())
 
             
 def add():
