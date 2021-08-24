@@ -18,7 +18,16 @@ if answer =="left":
         
     
 elif answer =="right":
-    answer = input("You stumble across a bridge, you want to cross it or head back")
+    answer = input("You stumble across a old bridge, you want to cross it or head back (cross/back)").lower()
+
+    if answer =="cross":
+        answer=input("you crossed the old bridge and on the other side see a stranger ")
+    elif answer =="back":
+        print("you head back in the direction you came from but end up getting lost")
+
+    else:
+        print("not a valid option. your quest has ended")
+      
 
 else:
     print("Not a valid option. Your quest has ended")
