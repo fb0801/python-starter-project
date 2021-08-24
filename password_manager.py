@@ -5,8 +5,12 @@ def view():
      with open("passwords.txt", "r") as f:
         #read a file
         for line in r.readlines():
-            print(line.rstrip()) #right strip the \n
+            #print(line.rstrip()) #right strip the \n
+            data = line.rstrip()
+            user, passsw = data.split("|")
+            print("User:", user, "Password:", passw)
 
+            
 def add():
     name = input("Account Name: ")
     pwd = input("Password: ")
