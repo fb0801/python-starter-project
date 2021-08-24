@@ -16,9 +16,12 @@ def load_key():
     return key
 
 
-key = load_key()
+
+
 
 master_pwd =input("What is the master password? ")
+key = load_key() + master_pwd.encode()
+fer = Fernet(key)
 
 def view():
      with open("passwords.txt", "r") as f:
@@ -27,7 +30,7 @@ def view():
             #print(line.rstrip()) #right strip the \n
             data = line.rstrip()
             user, passsw = data.split("|")
-            print("User:", user, "Password:", passw)
+            print("User:", user, "Password:", fer.decrypt(passw.encode()))
 
             
 def add():
@@ -36,7 +39,7 @@ def add():
 
     with open("passwords.txt", "a") as f:
         #create a file and add data to it
-        f.write(name + "|" + pwd + "\n")
+        f.write(name + "|" + fer.encrypt(pwd.encode()) + "\n")
 
 
 
