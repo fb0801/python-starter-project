@@ -39,5 +39,6 @@ while True:
     
 
 
-    
+print("you won", user_wins, "times")
+print("The computer wins", computer_wins, "times")
 print("This is the end \n This is the end \n Beautiful friend \n This is the end \n My only friend, the end")
